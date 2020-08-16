@@ -76,6 +76,8 @@ const cardComparisonApplication1 = () => {
     const card1Back = cardsComparisonSlot1.querySelector(".cells-back");
     const card2Front = cardsComparisonSlot2.querySelector(".cells-front");
     const card2Back = cardsComparisonSlot2.querySelector(".cells-back");
+    cardsComparisonSlot1.style.pointerEvents = "auto";
+    cardsComparisonSlot2.style.pointerEvents = "auto";
 
     card1Back.style.transform = "rotateY(-180deg)";
     card1Front.style.transform = "rotateY(0)";
@@ -106,6 +108,8 @@ const cardComparisonApplication2 = () => {
     const card1Back = cardsComparisonSlot3.querySelector(".cells-back");
     const card2Front = cardsComparisonSlot4.querySelector(".cells-front");
     const card2Back = cardsComparisonSlot4.querySelector(".cells-back");
+    cardsComparisonSlot3.style.pointerEvents = "auto";
+    cardsComparisonSlot4.style.pointerEvents = "auto";
 
     card1Back.style.transform = "rotateY(-180deg)";
     card1Front.style.transform = "rotateY(0)";
@@ -132,6 +136,12 @@ const shuffleImages = (image) => {
   }
   return image;
 };
+/////////////pointerEvent
+const pointerEventsHandler = () => {
+  for (const elements of cards) {
+    elements.style.pointerEvents = "auto";
+  }
+};
 /////////////////////////CARD CLICKS HANDLING//////////////////////////
 const cardsClickHandler = () => {
   for (let i = 0; i < cards.length; i++) {
@@ -155,6 +165,7 @@ const cardsClickHandler = () => {
           cardComparisonApplication2();
         }, 500);
       }
+      cards[i].style.pointerEvents = "none";
     });
   }
 };
@@ -208,6 +219,7 @@ const gameWinHandler = () => {
 
 const playAgainBtn = document.querySelector(".gameWinMessage button");
 playAgainBtn.addEventListener("click", () => {
+  pointerEventsHandler();
   gameWinMessage.style.top = "-70%";
   backdrop.style.opacity = 0;
   setTimeout(() => {
@@ -230,6 +242,7 @@ const gameOverHandler = () => {
   }, 40000);
 };
 restartGameBtn.addEventListener("click", () => {
+  pointerEventsHandler();
   winMessageCounter = [];
   shuffleImages(images);
   imagesAssignment();
@@ -240,7 +253,9 @@ restartGameBtn.addEventListener("click", () => {
 });
 
 const newGameBtn = document.querySelector(".gameOverMessage button");
+
 newGameBtn.addEventListener("click", () => {
+  pointerEventsHandler();
   gameOverMessage.style.top = "-13rem";
   newGameHandler();
   gameOverHandler();
