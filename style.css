@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media (max-width: 56.35em) {
+  html {
+    font-size: 50%;
+  }
+} 
+
+.app {
+    margin: 2rem 2rem;
+    border-radius: 1rem;  
+    display: flex;
+    flex-direction: row;
+    background-color: #ebe8b7;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+@media (max-width: 37.5em) {
+    .app {
+      height: 100vh;
+      flex-direction: column;
+    }
+}
+.backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  z-index: 500;
+  background-color: #3d38388d;
+  backdrop-filter: blur(10px);
+  transition: all .8s;
+  /* display: none; */
+}
+.cells-container {
+  flex:  0 0 70%;
+  padding: 1rem 1rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 37.5em) {
+  .cells-container {
+    flex: 0 0 10%;
+  }
+}
+.menu {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 37.5em) {
+  .menu {
+    flex: 0 0 10%;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+}
+.cells {
+  flex:  0 0 22%;
+  height: 15rem;
+  transition: all .6s;
+  perspective: 150rem;
+}
+@media (max-width: 43.75em) {
+  .cells {
+    height: 12rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .cells {
+    height: 10rem;
+  }
+}
+.cells:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.side {
+  height: 100%;
+  width: 100%;
+  transition: all .5s;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.cells-front{
+  background-image: url(./img/cell.jpg);
+  background-size: cover;
+  color: white;
+}
+.cells-back{
+  background-color: red;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcoming-page {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #ebe8b7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: 0 0 100%;
+  color: #61a522;
+  font-size: 2rem;
+  flex-wrap: wrap;
+  transition: all .6s;
+  border-radius: 10px;
+}
+
+.welcoming-page h1 {
+  flex:  0 0 100%;
+  text-align: center;
+  letter-spacing: 10px;
+}
+.welcoming-pageBtn {
+  padding: 1.5rem 2rem;
+  background-color: #61a522;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+}
+.welcoming-pageBtn:focus {
+  outline: none;
+}
+
+.gameOverMessage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: -13rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 13rem;
+  z-index: 1500;
+  background-color: #ebe8b7;
+  border-radius: 10px;
+  color: red;
+  transition: all .6s;
+}
+@media (max-width: 37.5em) {
+  .gameOverMessage {
+    width: 95%;
+  }
+}
+.gameOverMessage h1 {
+  flex:  0 0 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+@media (max-width: 25em) {
+  .gameOverMessage h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.gameOverMessage button {
+  padding: .5rem 2rem;
+  background-color: #61a522;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 4rem;
+}
+
+.gameOverMessage button:focus {
+  outline: none;
+}
+
+.gameWinMessage {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1600;
+  background-color: #ebe8b7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: 0 0 100%;
+  color: #61a522;
+  font-size: 2rem;
+  flex-wrap: wrap;
+  transition: all .6s;
+  border-radius: 10px;
+}
+
+.gameWinMessage h1 {
+  flex:  0 0 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.gameWinMessage button {
+  padding: .5rem 2rem;
+  background-color: #61a522;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 4rem;
+}
+
+.gameWinMessage button:focus {
+  outline: none;
+}
+.tribute {
+  color: #61a522;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+}
+.tributeContainer {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.tributeContainer img:active {
+  background-color: #61a522;
+}
+#newGame {
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  background-color: #61a522;
+  color: white;
+}
+
+#newGame:focus {
+  outline: none;
+}
+
+#timer {
+  font-size: 3rem;
+}
