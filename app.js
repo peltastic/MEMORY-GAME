@@ -226,6 +226,8 @@ playAgainBtn.addEventListener("click", () => {
     backdrop.style.display = "none";
   }, 500);
   shuffleImages(images);
+  imagesAssignment();
+  cardImageLink();
   newGameHandler();
   resetTimerHandler();
   gameOverHandler();
@@ -259,6 +261,8 @@ newGameBtn.addEventListener("click", () => {
   shuffleImages(images);
   pointerEventsHandler();
   gameOverMessage.style.top = "-13rem";
+  imagesAssignment();
+  cardImageLink();
   newGameHandler();
   gameOverHandler();
   winMessageCounter = [];
@@ -281,6 +285,8 @@ startGameBtn.addEventListener("click", () => {
     backdrop.style.display = "none";
   }, 500);
   shuffleImages(images);
+  imagesAssignment();
+  cardImageLink();
   timerHandler();
   gameOverHandler();
 });
