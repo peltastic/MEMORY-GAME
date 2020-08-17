@@ -225,6 +225,7 @@ playAgainBtn.addEventListener("click", () => {
   setTimeout(() => {
     backdrop.style.display = "none";
   }, 500);
+  shuffleImages(images);
   newGameHandler();
   resetTimerHandler();
   gameOverHandler();
@@ -255,6 +256,7 @@ restartGameBtn.addEventListener("click", () => {
 const newGameBtn = document.querySelector(".gameOverMessage button");
 
 newGameBtn.addEventListener("click", () => {
+  shuffleImages(images);
   pointerEventsHandler();
   gameOverMessage.style.top = "-13rem";
   newGameHandler();
@@ -278,6 +280,7 @@ startGameBtn.addEventListener("click", () => {
     welcomePage.style.display = "none";
     backdrop.style.display = "none";
   }, 500);
+  shuffleImages(images);
   timerHandler();
   gameOverHandler();
 });
