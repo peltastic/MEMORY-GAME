@@ -43,6 +43,12 @@ nav {
   padding: 2rem 10rem;
   margin-bottom: 2rem;
 }
+
+@media (max-width: 450px) {
+  nav {
+    padding: 2rem 2rem;
+  }
+}
 nav h1 {
   margin-right: auto;
   font-size: 2rem;
@@ -107,17 +113,12 @@ nav h1 {
 
   
 }
-@media (max-width: 43.75em) {
+@media (max-width: 700px) {
   .cells {
-    height: 12rem;
+    height: 8rem;
   }
 }
 
-@media (max-width: 25em) {
-  .cells {
-    height: 10rem;
-  }
-}
 .cells:not(:last-child) {
   margin-bottom: 2rem;
 }
