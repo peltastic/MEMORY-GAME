@@ -199,7 +199,7 @@ const timerHandler = () => {
       time = 0;
     } else {
       time -= 1;
-      timeRef.textContent = time;
+      timeRef.textContent = `${ time < 10 ? "0" + time : time}`;
     }
   }, 1000);
 };

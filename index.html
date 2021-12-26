@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -22,112 +28,84 @@
     </div>
     <div class="backdrop"></div>
     <div class="app">
-      <div class="menu">
+      <nav>
+        <h1>Memory Game</h1>
         <button id="newGame">RESTART</button>
-        <p id="timer">00:<span>00</span></p>
-      </div>
+      </nav>
       <div class="cells-container">
         <div class="cells" data-id="" id="c1">
-          <div class="side cells-front"> </div>
-          <div class="side cells-back">
-          </div>
-        </div>
-        <div class="cells"  data-id="" id="c2">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back"></div>
         </div>
-        <div class="cells"  data-id="" id="c3">
+        <div class="cells" data-id="" id="c2">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c4">
+        <div class="cells" data-id="" id="c3">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c5">
+        <div class="cells" data-id="" id="c4">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c6">
+        <div class="cells" data-id="" id="c5">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c7">
+        <div class="cells" data-id="" id="c6">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c8">
+        <div class="cells" data-id="" id="c7">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c9">
+        <div class="cells" data-id="" id="c8">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c10">
+        <div class="cells" data-id="" id="c9">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c11">
+        <div class="cells" data-id="" id="c10">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c12">
+        <div class="cells" data-id="" id="c11">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c13">
+        <div class="cells" data-id="" id="c12">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c14">
+        <div class="cells" data-id="" id="c13">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c15">
+        <div class="cells" data-id="" id="c14">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
         </div>
-        <div class="cells"  data-id="" id="c16">
+        <div class="cells" data-id="" id="c15">
           <div class="side cells-front"></div>
-          <div class="side cells-back">
-            BACK
-          </div>
+          <div class="side cells-back">BACK</div>
+        </div>
+        <div class="cells" data-id="" id="c16">
+          <div class="side cells-front"></div>
+          <div class="side cells-back">BACK</div>
+        </div>
+        <div class="menu">
+          <p>TIME:</p>
+          <p id="timer">00:<span>00</span></p>
         </div>
       </div>
       <div class="tributeContainer">
-        <img src="img/icon-twitter.svg" alt="twitter-icon">
+        <img src="img/icon-twitter.svg" alt="twitter-icon" />
         <p class="tribute">Developed by Pelumi</p>
       </div>
-      
     </div>
   </body>
 </html>
